@@ -3,40 +3,39 @@ using Core.DataTransferObject;
 using Core.Entities;
 using Core.GlobalRepository;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Application.Implementation
 {
-
-    public class TransactionAppService : ITransactionAppService
+    public class RateAppService : IRateAppService
     {
-
         private readonly ICurrencySource _currencySource;
 
-        public TransactionAppService(ICurrencySource currencySource
+        public RateAppService(
+             ICurrencySource currencySource
             )
         {
             _currencySource = currencySource;
         }
+
         public BaseApiResult GetAll()
         {
             var response = new BaseApiResult();
             try
             {
-                var transactions = _currencySource.GetTransactions();
-                if (transactions != null)
+                var rates = _currencySource.GetRates();
+                if (rates != null)
                 {
-                    var localtransaction = transactions.Select(s => new Transaction
+                    var localrates = rates.Select(s => new Rates
                     {
-                        Amount = s.Amount,
-                        Currency = s.Currency,
-                        Sku = s.Sku,
                         RegistrationDate = DateTime.Now,
                         Status = StatusType.Active,
+                        From = s.From,
+                        Rate = s.Rate,
+                        To = s.To
                     });
 
-                    response.Data = localtransaction;
+                    response.Data = localrates;
                     response.Message = "correcto";
                     response.Success = true;
                 }

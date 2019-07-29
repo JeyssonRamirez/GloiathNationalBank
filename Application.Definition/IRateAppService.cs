@@ -1,8 +1,9 @@
-﻿namespace Application.Definition
+﻿using Core.DataTransferObject;
+
+namespace Application.Definition
 {
     public interface IRateAppService
     {
-
-        
+        BaseApiResult GetAll();
     }
 }

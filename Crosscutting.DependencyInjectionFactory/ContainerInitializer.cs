@@ -21,6 +21,7 @@ namespace Crosscutting.DependencyInjectionFactory
 
             //AppServices
             container.RegisterType<ITransactionAppService, TransactionAppService>();
+            container.RegisterType<IRateAppService, RateAppService>();
 
 
         }
