@@ -39,6 +39,29 @@ namespace GNB.Api
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "GNB API",
+                    Description = "Gloiath National Bank Api",
+                    TermsOfService = "https://gnb.com/terms",
+                    Contact = new Contact
+                    {
+                        Name = "Shayne Boyer",
+                        Email = string.Empty,
+                        Url = "https://gnb.com/riskDectect",
+                    },
+                    License = new License
+                    {
+                        Name = "Use under LICX",
+                        Url = "https://gnb.com/riskDectect"
+                    }
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +78,14 @@ namespace GNB.Api
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
             app.UseMvc();
         }
     }

@@ -13,11 +13,11 @@ namespace Crosscutting.DependencyInjectionFactory
         {
 
 
-            //Repositories
+            //External Repositories 
             container.RegisterType<ICurrencySource, CurrencySourceHerokuApp>();
             //Mongo
 
-            //Azure
+            //Other
 
             //AppServices
             container.RegisterType<ITransactionAppService, TransactionAppService>();

@@ -4,6 +4,7 @@ using Application.Definition;
 using Core.DataTransferObject;
 using Crosscutting.DependencyInjectionFactory;
 using Microsoft.AspNetCore.Mvc;
+using Presentation.Api.GNB.Models;
 
 namespace GNB.Api.Controllers
 {
@@ -37,6 +38,26 @@ namespace GNB.Api.Controllers
             }
 
             return Ok(r);
-        }       
+        }
+
+        [HttpGet]
+        [Route("GetTransactionBySkuAndCurrency")]
+        public IActionResult GetTransactionBySkuAndCurrency([FromQuery] TransactionBySkuAndCurrency model)
+        {
+            var r = new BaseApiResult();
+            if (!ModelState.IsValid)
+            {
+                var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+                //StatusCode(HttpStatusCode.BadRequest);
+                r.Message = string.Join(" ,", allErrors.Select(s => s.ErrorMessage).ToArray());
+            }
+            else
+            {
+
+                r = _transactionAppService.GetAll();
+            }
+
+            return Ok(r);
+        }
     }
 }
