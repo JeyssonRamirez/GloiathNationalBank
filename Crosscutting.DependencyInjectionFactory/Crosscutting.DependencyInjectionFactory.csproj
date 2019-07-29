@@ -8,4 +8,11 @@
     <PackageReference Include="Unity" Version="5.11.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Definition\Application.Definition.csproj" />
+    <ProjectReference Include="..\Application.Implementation\Application.Implementation.csproj" />
+    <ProjectReference Include="..\Core.GlobalRepository\Core.GlobalRepository.csproj" />
+    <ProjectReference Include="..\DataAccess.ExternalService.ApiRates\DataAccess.ExternalService.ApiRates.csproj" />
+  </ItemGroup>
+
 </Project>

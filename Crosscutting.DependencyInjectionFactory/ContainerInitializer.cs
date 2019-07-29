@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Application.Definition;
+using Application.Implementation;
+using Core.GlobalRepository;
+using DataAccess.ExternalService.ApiRates;
+using System;
 using Unity;
 
 namespace Crosscutting.DependencyInjectionFactory
@@ -10,12 +14,13 @@ namespace Crosscutting.DependencyInjectionFactory
 
 
             //Repositories
-           
+            container.RegisterType<ICurrencySource, CurrencySourceHerokuApp>();
             //Mongo
-           
+
             //Azure
-            
+
             //AppServices
+            container.RegisterType<ITransactionAppService, TransactionAppService>();
 
 
         }

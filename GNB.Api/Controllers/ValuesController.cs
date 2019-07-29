@@ -8,7 +8,7 @@ namespace GNB.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class TestSourceRatesController : ControllerBase
     {
         // GET api/values
         [HttpGet]
