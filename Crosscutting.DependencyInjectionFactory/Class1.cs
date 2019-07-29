@@ -1,8 +1,23 @@
 ﻿using System;
+using Unity;
 
 namespace Crosscutting.DependencyInjectionFactory
 {
-    public class Class1
+    public static class ContainerInitializer
     {
+        public static void InitializeContainer(this IUnityContainer container)
+        {
+
+
+            //Repositories
+           
+            //Mongo
+           
+            //Azure
+            
+            //AppServices
+
+
+        }
     }
 }
