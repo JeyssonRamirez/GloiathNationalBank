@@ -54,7 +54,7 @@ namespace GNB.Api.Controllers
             else
             {
 
-                r = _transactionAppService.GetAll();
+                r = _transactionAppService.GetTransactionsBySkuInOtherCurrency(model.SkuCode,"EUR");
             }
 
             return Ok(r);

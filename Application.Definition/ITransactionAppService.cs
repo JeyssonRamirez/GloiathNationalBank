@@ -9,6 +9,6 @@ namespace Application.Definition
     public interface ITransactionAppService
     {
         BaseApiResult GetAll();
-
+        BaseApiResult GetTransactionsBySkuInOtherCurrency(string sku,string currency);
     }
 }
