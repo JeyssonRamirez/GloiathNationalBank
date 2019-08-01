@@ -63,7 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crosscutting.Util", "Crossc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8941AD54-6597-4B27-AA32-DEF35D222296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Test", "Application.Test\Application.Test.csproj", "{49AB8915-82E3-43B3-AF38-CDFFC9BD433D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Test", "Application.Test\Application.Test.csproj", "{49AB8915-82E3-43B3-AF38-CDFFC9BD433D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Site.GNB", "Presentation.Site.GNB\Presentation.Site.GNB.csproj", "{DD087FA3-F501-4784-B994-FA5A1D090634}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +129,10 @@ Global
 		{49AB8915-82E3-43B3-AF38-CDFFC9BD433D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49AB8915-82E3-43B3-AF38-CDFFC9BD433D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49AB8915-82E3-43B3-AF38-CDFFC9BD433D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD087FA3-F501-4784-B994-FA5A1D090634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD087FA3-F501-4784-B994-FA5A1D090634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD087FA3-F501-4784-B994-FA5A1D090634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD087FA3-F501-4784-B994-FA5A1D090634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,6 +162,7 @@ Global
 		{4A844F0D-C67E-478C-AFBD-089B38C236A9} = {AF6E61B4-248D-4823-9C08-CAFF512C9783}
 		{8941AD54-6597-4B27-AA32-DEF35D222296} = {279E96A2-D166-47F4-B1EC-82B62BD352B5}
 		{49AB8915-82E3-43B3-AF38-CDFFC9BD433D} = {8941AD54-6597-4B27-AA32-DEF35D222296}
+		{DD087FA3-F501-4784-B994-FA5A1D090634} = {B3F00AA8-DD9E-4D63-8614-B5B72B5E2211}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3D2626A-D95C-4450-9EBF-F4C99830A116}

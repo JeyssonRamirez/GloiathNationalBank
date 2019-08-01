@@ -53,7 +53,7 @@ namespace Application.Implementation
 
         public BaseApiResult GetTransactionsBySkuInOtherCurrency(string sku, string currency)
         {
-            var currencyCode = "EUR";
+            
             var response = new BaseApiResult();
             try
             {
@@ -118,6 +118,7 @@ namespace Application.Implementation
                             var map = converter.GetMapToConvertionLineal(item.Currency, currency);
                             convertedTransaction.ConvertedAmount = converter.ConvertTo(item.Amount, map);
                             convertedTransaction.ConvertedCurrency = currency;
+                            convertedTransaction.ConvertionRoute = map;
                         }
                         else
                         {
